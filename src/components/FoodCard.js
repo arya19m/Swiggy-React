@@ -1,0 +1,3 @@
+export default function Foodcard({ foodData }) {
+  return <a href={foodData?.action?.link || "/restaurant"} className="group flex min-w-0 flex-col items-center rounded-2xl p-2 text-center transition hover:bg-orange-50"><img className="aspect-square w-full max-w-28 object-contain transition duration-300 group-hover:-translate-y-1 group-hover:scale-105" src={`https://media-assets.swiggy.com/swiggy/image/upload/${foodData?.imageId}`} alt={foodData?.action?.text || "Food category"} loading="lazy"/><span className="mt-2 line-clamp-2 text-xs font-bold text-slate-700 sm:text-sm">{foodData?.action?.text}</span></a>;
+}

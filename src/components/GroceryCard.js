@@ -1,0 +1,3 @@
+export default function Grocerycard({ foodData }) {
+  return <a href={foodData?.action?.link || "https://www.swiggy.com/instamart"} className="group w-28 flex-none rounded-2xl border border-slate-100 bg-white p-2 text-center transition hover:-translate-y-1 hover:border-orange-200 hover:shadow-lg sm:w-36"><img className="aspect-square w-full object-contain transition group-hover:scale-105" src={`https://media-assets.swiggy.com/swiggy/image/upload/${foodData?.imageId}`} alt={foodData?.action?.text || "Grocery"} loading="lazy"/><h3 className="mt-1 line-clamp-2 text-xs font-bold text-slate-700 sm:text-sm">{foodData?.action?.text}</h3></a>;
+}
